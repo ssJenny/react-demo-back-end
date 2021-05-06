@@ -40,7 +40,7 @@ router.post('/signup', (req, res) => {
             const user = new Account(params)
             user.save((err, result) => {
                 if (err) {
-                    res.status(202).sen({ success: 0, message: 'Register failed!' })
+                    res.status(200).send({ success: 0, message: 'Register failed!' })
                     return
                 }
                 res.status(200).send({ success: 1 })
